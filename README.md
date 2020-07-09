@@ -1,5 +1,5 @@
 # Cool_game
-It is an app which contains four games developed by me namely:;
+It is an app which contains four games developed by me namely: \n
 1.Dodge box
 2.Dodge box 2.0
 3.Duck Game
