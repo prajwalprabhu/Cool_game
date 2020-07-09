@@ -91,7 +91,7 @@ def main(screen):
                 x = random.randrange(120, 400)
 
             message("Count={}".format(count),(20,20),30,GREEN,screen)
-            message("hit c to pause",(20,55),30,GREEN,screen)
+            message("hit p to pause",(20,55),30,GREEN,screen)
             
             pygame.display.update()
             #clock.tick(60)
