@@ -1,6 +1,5 @@
 from tkinter import *
 from PIL import Image,ImageTk
-from tkinter.ttk import Button
 import game
 import Dodge
 import Dodge2
@@ -15,16 +14,16 @@ class app():
 		Label(window,text="Cool Games",font="freesanbold.ttf 40 bold italic").grid(row=0, column=1)
 		Label(window,text="_____________________________________").grid(row=0,column=2)
 		games=Frame(window)
-		games.config(background="blue")
+		games.config(bg="blue")
 		Label(window,text="Select The Game you wnt to play",font='none 15 italic').grid(row=1,column=0)
 		# games=Tk()
 		games.grid(row=2,column=0,sticky=W)
 
 		# games.pack()
-		Button(games,text="__Dodge Box__",command=lambda:self.select(window,1)).grid(column=0,row=0)
-		Button(games,text="Dodge Box 2.0",command=lambda:self.select(window,2)).grid(column=0,row=1)
-		Button(games,text="__Duck game__",command=lambda:self.select(window,3)).grid(column=0,row=2)
-		Button(games,text="____S P P S___",command=lambda:self.select(window,4)).grid(column=0,row=3)
+		Button(games,text="__Dodge Box__",bg="blue",fg="white",command=lambda:self.select(window,1)).grid(column=0,row=0)
+		Button(games,text="Dodge Box 2.0",bg="blue",fg="white",command=lambda:self.select(window,2)).grid(column=0,row=1)
+		Button(games,text="__Duck game__",bg="blue",fg="white",command=lambda:self.select(window,3)).grid(column=0,row=2)
+		Button(games,text="____S P P S___",bg="blue",fg="white",command=lambda:self.select(window,4)).grid(column=0,row=3)
 
 		intro=Frame(window)
 		# intro.config(bg="red")
@@ -95,7 +94,7 @@ class app():
 		img1=Label(image=image1)
 		img1.grid(row=2,column=1)
 		Label(dodge,text="To Play The game click->" ,font="none 19 bold").grid(row=3, column=0)
-		Button(dodge,text="Play",command=Dodge.intro).grid(row=3,column=1)
+		Button(dodge,text="Play",command=Dodge.intro ,font="none 19",height=2).grid(row=3,column=1)
 
 		dodge.mainloop()		
 
@@ -128,7 +127,7 @@ class app():
 		img3=Label(image=image3)
 		img3.grid(row=3,column=1)
 		Label(dodge,text="To Play The game click->" ,font="none 19 bold").grid(row=4, column=0)
-		Button(dodge,text="Play",command=Dodge2.start).grid(row=4,column=1)
+		Button(dodge,text="Play",command=Dodge2.start ,font="none 19",height=2).grid(row=4,column=1)
 
 		dodge.mainloop()		
 
@@ -159,9 +158,10 @@ class app():
 		img2.grid(row=3,column=0)
 		
 		Label(dodge,text="To Play The game click->" ,font="none 19 bold").grid(row=3, column=1)
-		Button(dodge,text="Play",command=duck.intro ).grid(row=3,column=2)
+		Button(dodge,text="Play",command=duck.intro ,font="none 19",height=2).grid(row=3,column=2)
 
-		dodge.mainloop()		
+		dodge.mainloop()	
+			
 
 	def SPPS(self):
 
@@ -193,7 +193,7 @@ class app():
 		img3.grid(row=3,column=0)
 		
 		Label(dodge,text="To Play The game click->" ,font="none 19 bold").grid(row=3, column=1)
-		Button(dodge,text="Play",command=game.main ).grid(row=3,column=2)
+		Button(dodge,text="Play",command=game.main ,font="none 19",height=2).grid(row=3,column=2)
 
 		dodge.mainloop()		
 
